@@ -1,0 +1,31 @@
+{
+  "name": "stock-system",
+  "version": "1.0.0",
+  "description": "stock system",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitorInacioBorges/book-renting-system.git"
+  },
+  "keywords": [
+    "product",
+    "movement",
+    "stock"
+  ],
+  "author": "vitor inacio borges",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VitorInacioBorges/stock-system/issues"
+  },
+  "homepage": "https://github.com/VitorInacioBorges/stock-system#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
