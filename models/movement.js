@@ -6,7 +6,7 @@ const movementSchema = new mongoose.Schema({
         required: true,
     },
 
-    type: {
+    type: { // true: entrada / false: saida
         type: Boolean,
         required: true,
     },
