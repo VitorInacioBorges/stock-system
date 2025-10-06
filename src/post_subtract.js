@@ -1,6 +1,6 @@
-const mongoose = require("../../modules/mongoose");
-const { Product } = require("../../models/product");
-const { Movement } = require("../../models/movement");
+const mongoose = require("../modules/mongoose");
+const { Product } = require("../models/product");
+const { Movement } = require("../models/movement");
 
 const post_subtract = async(productId, name, quantity) => {
     try {

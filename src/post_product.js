@@ -1,5 +1,5 @@
-const mongoose = require("../../modules/mongoose");
-const { Product } = require("../../models/product");
+const mongoose = require("../modules/mongoose");
+const { Product } = require("../models/product");
 
 const post_product = async(name, quantity) => {
     try {
