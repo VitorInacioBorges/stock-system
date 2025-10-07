@@ -5,7 +5,7 @@ const { Movement } = require("../models/movement");
 // creates a product under name and quantity parameters, the name is updated and the quantity is added to the current quantity
 // the parameters are passed into a route that creates a web method (post in this case)
 
-const post_add = async (productId, name, quantity) => {
+const post_add = async (productId, quantity) => {
   try {
     const currentProduct = await Product.findById(productId);
 
@@ -21,7 +21,6 @@ const post_add = async (productId, name, quantity) => {
       productId,
       {
         $inc: { quantity: quantity }, // Atomically add to existing quantity
-        $set: { name: name }, // Update name
       },
       { new: true, runValidators: true }
     );

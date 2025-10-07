@@ -2,7 +2,7 @@ const mongoose = require("../modules/mongoose");
 const { Product } = require("../models/product");
 const { Movement } = require("../models/movement");
 
-const post_subtract = async (productId, name, quantity) => {
+const post_subtract = async (productId, quantity) => {
   try {
     const currentProduct = await Product.findById(productId);
 
@@ -20,7 +20,6 @@ const post_subtract = async (productId, name, quantity) => {
       productId,
       {
         $inc: { quantity: -quantity }, // Atomically subtract from existing quantity
-        $set: { name: name }, // Update name
       },
       { new: true, runValidators: true }
     );
