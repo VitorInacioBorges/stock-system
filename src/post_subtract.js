@@ -7,12 +7,12 @@ const post_subtract = async (productId, name, quantity) => {
     const currentProduct = await Product.findById(productId);
 
     if (!currentProduct) {
-      throw new Error("Product not found");
+      throw new Error("Produto nao encontrado");
     }
 
     if (currentProduct.quantity - quantity < 0) {
       throw new Error(
-        `Cannot subtract ${quantity} from ${currentProduct.quantity}. Insufficient stock.`
+        `Quantidade de Retirada: ${quantity}\nQuantidade Atual: ${currentProduct.quantity}. Estoque insuficiente.`
       );
     }
 
@@ -43,7 +43,7 @@ const post_subtract = async (productId, name, quantity) => {
       movement: savedMovement,
     };
   } catch (error) {
-    console.error("Erro ao atualizar o quantidade do produto!!!", error);
+    console.error("Erro ao diminuir a quantidade do produto!!!", error);
 
     return {
       success: false,
